@@ -1,5 +1,5 @@
 const mongo = require('mongoose')
-const mongoUri = 'mongodb+srv://admin:admin@cluster0.f6b0c.mongodb.net/FoodApp?retryWrites=true&w=majority&appName=Cluster0'
+const mongoUri = process.env.CONNECTION_STRING
 
 const mongoConnect = async () => {
     try {

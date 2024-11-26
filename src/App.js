@@ -10,6 +10,7 @@ import Signup from './screens/Signup.js';
 import { CartProvider } from './components/ContextReducer.js';
 
 function App() {
+  console.log(process.env.REACT_APP_DOMAINURL)
   return (
     <CartProvider>
     <BrowserRouter>

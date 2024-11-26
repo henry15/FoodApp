@@ -7,8 +7,8 @@ export default function Login() {
   let navigate= useNavigate()
   const handleSubmit = async (e) => {
       e.preventDefault(); // study this
-
-      const response = await fetch("http://localhost:5000/api/login", {
+      let domain =  process.env.REACT_APP_DOMAINURL  +process.env.REACT_APP_PORT
+      const response = await fetch( domain +"/api/login", {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'

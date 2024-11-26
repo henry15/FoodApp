@@ -8,8 +8,8 @@ export default function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault(); // study this
-
-        const response = await fetch("http://localhost:5000/api/createuser", {
+        let domain =  process.env.REACT_APP_DOMAINURL  +process.env.REACT_APP_PORT
+        const response = await fetch(domain +"/api/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

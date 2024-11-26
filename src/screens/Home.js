@@ -13,9 +13,10 @@ export default function Home() {
     const [fooditem, setfooditem] = useState([]) // for looping
 
     const [search, setsearch] = useState('')
-
+    let domain = process.env.REACT_APP_DOMAINURL  +process.env.REACT_APP_PORT
+    console.log('__'+process.env.REACT_APP_DOMAINURL)
     const loadData = async () => {
-        let response = await fetch("http://localhost:5000/api/fooddata", {
+        let response = await fetch( domain+"/api/fooddata", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

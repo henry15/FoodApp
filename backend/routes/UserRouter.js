@@ -8,7 +8,7 @@ const jwt =require('jsonwebtoken')
 const { body, validationResult } = require('express-validator')
 const { UNSAFE_ErrorResponseImpl } = require('react-router-dom')
 
-const jwtsecret = "IamworkingonNodejsandReactappforpractise"
+const jwtsecret = process.env.ACCESSTOKEN
 
 router.post("/createuser", [
     body('email').isEmail(),

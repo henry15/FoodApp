@@ -1,12 +1,12 @@
 const express= require("express");
+const dotenv = require("dotenv").config();
 const app = express();
-const port = 5000
-
+const port = process.env.PORT
 const mongodb = require('./db')
 
 // for CORS policy error
 app.use((req, res, next)=>{
-    res.setHeader("Access-Control-Allow-Origin","http://localhost:3000")
+    res.setHeader("Access-Control-Allow-Origin", process.env.DOMAINURL + "3000")
     res.header(
         "Access-Control-Allow-Headers",
         "Origin,X-Requested-With, Content-Type, Accept"
@@ -26,6 +26,7 @@ app.use('/api',require("./routes/UserRouter"))
 app.use('/api',require("./routes/DisplayDataRoute"))
 app.use('/api', require('./routes/OrderRoute'))
 
+console.log(port)
 app.listen(port,()=>{
     console.log(`port running on ${port}`)
 })
