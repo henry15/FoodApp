@@ -6,7 +6,6 @@ const bcrypt = require('bcryptjs')
 const jwt =require('jsonwebtoken')
 
 const { body, validationResult } = require('express-validator')
-const { UNSAFE_ErrorResponseImpl } = require('react-router-dom')
 
 const jwtsecret = process.env.ACCESSTOKEN
 
