@@ -7,7 +7,7 @@ export default function Login() {
   let navigate= useNavigate()
   const handleSubmit = async (e) => {
       e.preventDefault(); // study this
-      let domain =  process.env.REACT_APP_DOMAINURL  +process.env.REACT_APP_PORT
+      let domain =  process.env.REACT_APP_DOMAINURL 
       const response = await fetch( domain +"/api/login", {
           method: 'POST',
           headers: {

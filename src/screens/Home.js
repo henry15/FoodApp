@@ -13,7 +13,7 @@ export default function Home() {
     const [fooditem, setfooditem] = useState([]) // for looping
 
     const [search, setsearch] = useState('')
-    let domain = process.env.REACT_APP_DOMAINURL  +process.env.REACT_APP_PORT
+    let domain = process.env.REACT_APP_DOMAINURL 
     console.log('__'+process.env.REACT_APP_DOMAINURL)
     const loadData = async () => {
         let response = await fetch( domain+"/api/fooddata", {
